@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>May Salimi — Business/Data Analyst </title>
+  <style>
+    :root {
+      --breeze: #C9D4DA;
+      --sky: #ADC8D9;
+      --peony: #E3D1D7;
+      --text-dark: #2c2c2c;
+      --text-light: #f9f9f9;
+      --accent: #708090;
+    }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: var(--breeze);
+      color: var(--text-dark);
+      line-height: 1.6;
+      transition: all 0.3s ease;
+    }
+    header {
+      background: var(--sky);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 32px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+    nav a {
+      text-decoration: none;
+      margin-left: 16px;
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .lang-btn {
+      background: var(--peony);
+      border: none;
+      border-radius: 8px;
+      padding: 6px 10px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 16px;
+    }
+    section {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+    }
+    .project {
+      border: 1px solid var(--sky);
+      border-radius: 8px;
+      padding: 12px;
+      background: var(--breeze);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: var(--sky);
+      color: var(--text-dark);
+    }
+    @media(max-width:600px){
+      nav a{margin-left:8px;font-size:14px;}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 id="title">May — Business/Data Analyst</h1>
+    <div>
+      <nav>
+        <a href="#about" id="nav-about">About</a>
+        <a href="#resume" id="nav-resume">Resume</a>
+        <a href="#projects" id="nav-projects">Projects</a>
+        <a href="#contact" id="nav-contact">Contact</a>
+      </nav>
+    </div>
+    <button class="lang-btn" id="lang-toggle">🇮🇹 IT</button>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2 id="about-title">About Me</h2>
+      <p id="about-text">
+        I am a Business and Data Analyst with a strong background in finance and economics.
+        I enjoy transforming data into actionable insights and helping businesses make
+        data-driven decisions. I’m fluent in English and Italian, and I’ve worked in
+        international environments including UniCredit.
+      </p>
+    </section>
+
+    <section id="resume">
+      <h2 id="resume-title">Resume</h2>
+      <p id="resume-text">
+        You can download my full resume here:
+        <a href="resume.pdf" target="_blank">Download PDF</a>
+      </p>
+      <ul id="skills-list">
+        <li>Data Analysis (SQL, Excel, Power BI, Python)</li>
+        <li>Financial Modeling and Reporting</li>
+        <li>Business Process Optimization</li>
+        <li>Dashboard Design and Automation</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2 id="projects-title">Selected Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <h3 id="proj1-title">E-commerce Funnel Analysis</h3>
+          <p id="proj1-text">
+            Analyzed user journeys on an e-commerce site to identify key drop-off points,
+            leading to a 12% improvement in conversion rate.
+          </p>
+        </div>
+        <div class="project">
+          <h3 id="proj2-title">Financial KPI Dashboard</h3>
+          <p id="proj2-text">
+            Built an automated Power BI dashboard integrating MySQL and Excel data for monthly
+            reporting, saving 6+ hours per week.
+          </p>
+        </div>
+        <div class="project">
+          <h3 id="proj3-title">A/B Test Evaluation</h3>
+          <p id="proj3-text">
+            Designed and analyzed an A/B test to measure the impact of a pricing strategy update
+            using SQL and Python.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 id="contact-title">Contact</h2>
+      <p id="contact-text">You can reach me at: <strong>your.email@example.com</strong></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/" target="_blank">linkedin.com/in/</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p id="footer-text">© 2025 May — All Rights Reserved</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById("lang-toggle");
+    let currentLang = "en";
+
+    toggle.addEventListener("click", () => {
+      if (currentLang === "en") {
+        document.getElementById("title").innerText = "May — Analista di Business";
+        document.getElementById("nav-about").innerText = "Chi Sono";
+        document.getElementById("nav-resume").innerText = "Curriculum";
+        document.getElementById("nav-projects").innerText = "Progetti";
+        document.getElementById("nav-contact").innerText = "Contatti";
+
+        document.getElementById("about-title").innerText = "Chi Sono";
+        document.getElementById("about-text").innerText =
+          "Sono una Business & Data Analyst con una solida formazione in finanza ed economia. Amo trasformare i dati in informazioni utili per supportare decisioni strategiche basate sui dati. Parlo fluentemente inglese e italiano, e ho lavorato in contesti internazionali come UniCredit e l'università.";
+
+        document.getElementById("resume-title").innerText = "Curriculum";
+        document.getElementById("resume-text").innerHTML =
+          "Puoi scaricare il mio curriculum completo qui: <a href='resume.pdf' target='_blank'>Scarica PDF</a>";
+        document.getElementById("skills-list").innerHTML = `
+          <li>Analisi dei dati (SQL, Excel, Power BI, Python)</li>
+          <li>Modellazione e reportistica finanziaria</li>
+          <li>Ottimizzazione dei processi aziendali</li>
+          <li>Design e automazione dei dashboard</li>`;
+
+        document.getElementById("projects-title").innerText = "Progetti Selezionati";
+        document.getElementById("proj1-title").innerText = "Analisi del Funnel E-commerce";
+        document.getElementById("proj1-text").innerText =
+          "Analisi dei percorsi utenti su un sito e-commerce per identificare i punti critici, con un miglioramento del 12% del tasso di conversione.";
+        document.getElementById("proj2-title").innerText = "Dashboard di KPI Finanziari";
+        document.getElementById("proj2-text").innerText =
+          "Creazione di un dashboard Power BI automatizzato integrando dati MySQL e Excel per la reportistica mensile.";
+        document.getElementById("proj3-title").innerText = "Valutazione Test A/B";
+        document.getElementById("proj3-text").innerText =
+          "Progettazione e analisi di un test A/B per misurare l’impatto di una nuova strategia di prezzo.";
+
+        document.getElementById("contact-title").innerText = "Contatti";
+        document.getElementById("contact-text").innerText =
+          "Puoi contattarmi a: your.email@example.com";
+        document.getElementById("footer-text").innerText =
+          "© 2025 May — Tutti i diritti riservati";
+
+        toggle.innerText = "🇬🇧 EN";
+        currentLang = "it";
+      } else {
+        location.reload(); // برگرد به انگلیسی با ریست سریع
+      }
+    });
+  </script>
+
+</body>
+</html>
